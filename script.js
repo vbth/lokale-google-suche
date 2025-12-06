@@ -80,6 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const typeMap = {
                 'isch': 'Bilder',
+                'lcl': 'Orte',
                 'nws': 'News',
                 'shop': 'Shopping',
                 'vid': 'Videos'
