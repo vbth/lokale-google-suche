@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lokale Google Suche</title>
+    <meta property="og:title" content="Lokale Google Suche">
+    <meta property="og:description"
+        content="Ein lokales Werkzeug zur Simulation von Google-Suchanfragen aus verschiedenen Ländern, Sprachen und auf verschiedenen Geräten.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:image" content="og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-row">
+            <h1>Lokale Suche</h1>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Dunkelmodus umschalten">
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+        </div>
+        <p class="subtitle">Simuliere Google-Suchanfragen von jedem Ort</p>
+
+        <div class="form-group">
+            <label for="search-type">Suchart</label>
+            <div class="select-wrapper">
+                <select id="search-type">
+                    <option value="">Web</option>
+                    <option value="isch">Bilder</option>
+                    <option value="nws">News</option>
+                    <option value="shop">Shopping</option>
+                    <option value="vid">Videos</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="search-query">Suchbegriff</label>
+            <input type="text" id="search-query" placeholder="Wonach suchst du?" autofocus list="history-queries">
+            <datalist id="history-queries"></datalist>
+        </div>
+
+        <div class="form-group">
+            <label for="city">Ort (Optional)</label>
+            <input type="text" id="city" placeholder="z.B. Berlin, München, Hamburg" list="history-cities">
+            <datalist id="history-cities"></datalist>
+        </div>
+
+        <div class="row">
+            <div class="form-group half">
+                <label for="country">Land</label>
+                <div class="select-wrapper">
+                    <select id="country"></select>
+                </div>
+            </div>
+
+            <div class="form-group half">
+                <label for="language">Sprache</label>
+                <div class="select-wrapper">
+                    <select id="language"></select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group half">
+                <label for="google-domain">Google Domain</label>
+                <div class="select-wrapper">
+                    <select id="google-domain"></select>
+                </div>
+            </div>
+            <div class="form-group half">
+                <label for="device">Gerätetyp</label>
+                <div class="select-wrapper">
+                    <select id="device">
+                        <option value="desktop">Desktop</option>
+                        <option value="mobile">Mobil</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group checkbox-group">
+            <input type="checkbox" id="adtest-toggle">
+            <label for="adtest-toggle">AdTest Modus (für mobile Simulation nötig, Links evtl. nicht klickbar)</label>
+        </div>
+
+        <button id="search-btn" class="search-btn">Google Suche starten</button>
+
+        <div id="history-section" class="history-section" style="display: none;">
+            <h3>Letzte Suchanfragen</h3>
+            <div id="history-list" class="history-list"></div>
+            <button id="clear-history" class="clear-history-btn">Verlauf löschen</button>
+        </div>
+
+        <div class="footer">
+            <p>Läuft lokal in deinem Browser. Keine Daten werden gesammelt.</p>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
