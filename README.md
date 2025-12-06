@@ -22,9 +22,7 @@ Einfach die Datei `index.html` in deinem Browser öffnen.
 
 ### Option 2: Hosting (Kostenlos)
 Dieses Tool besteht nur aus statischen Dateien (HTML, CSS, JS) und kann sehr einfach online gestellt werden:
-## Lizenz
 
-Dieses Projekt steht unter der [CC0 1.0 Universal](LICENSE) Lizenz. Es ist gemeinfrei, du kannst den Code also nach Belieben kopieren, verändern und nutzen.
 *   **Netlify**: Ziehe den Projektordner einfach in den "Drop"-Bereich auf netlify.com.
 *   **GitHub Pages**: Lade den Code auf GitHub hoch und aktiviere "Pages" in den Einstellungen.
 
@@ -35,4 +33,4 @@ Dieses Projekt steht unter der [CC0 1.0 Universal](LICENSE) Lizenz. Es ist gemei
 *   `style.css`: Das Design (inkl. Dark Mode).
 
 ## Lizenz
-Creative Commons Zero v1.0 Universal
+Dieses Projekt steht unter der [CC0 1.0 Universal](LICENSE) Lizenz. Es ist gemeinfrei, du kannst den Code also nach Belieben kopieren, verändern und nutzen.
